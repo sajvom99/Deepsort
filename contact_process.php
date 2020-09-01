@@ -32,6 +32,12 @@
 	$body .= "</tbody></table>";
 	$body .= "</body></html>";
 
-    $send = mail($to, $subject, $body, $headers);
+	$send = mail($to, $subject, $body, $headers);
+	if($send) {
+		echo "EMail Sent Successfully!";
+		} else {
+		echo "No Email is sent";
+		}
+		
 
 ?>
